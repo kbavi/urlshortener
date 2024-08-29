@@ -98,8 +98,8 @@ export function Shorten() {
                     {
                         shortUrl && (
                             <div className="flex items-center">
-                                <Link target="_blank" href={`${baseUrl}/${shortUrl}`}>
-                                    <p className="underline text-md text-teal-600">{`${baseUrl}/${shortUrl}`}</p>
+                                <Link target="_blank" href={`/${shortUrl}`}>
+                                    <p className="underline text-md text-teal-600">{`${process.env.NEXT_PUBLIC_CLIENT_BASE_URL}/${shortUrl}`}</p>
                                 </Link>
                                 {
                                     !copyClicked &&
