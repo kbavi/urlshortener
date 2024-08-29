@@ -27,8 +27,9 @@ func main() {
 	app.Get("/:id", RedirectHandler)
 
 	app.Post("/shorten", SaveURLHandler)
+	port := os.Getenv("PORT")
 
-	app.Listen(":8080")
+	app.Listen(":" + port)
 }
 
 func Init() {
