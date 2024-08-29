@@ -34,7 +34,7 @@ func main() {
 
 func Init() {
 	env := os.Getenv("ENV")
-	if env == "local" {
+	if env != "production" {
 		err := godotenv.Load()
 		if err != nil {
 			log.Fatal("Error loading .env file")
